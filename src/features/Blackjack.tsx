@@ -77,7 +77,7 @@ const Blackjack = () => {
           setRemainingCards(data.remaining);
           if (points === 21) {
             console.log("Player wins!");
-            setWinner("Player!");
+            setWinner("Player (on initial draw)!");
           } else if (points > 21) {
             console.log("Player busts!");
             setWinner("House wins (player busts)!");
@@ -144,6 +144,9 @@ const Blackjack = () => {
     if (housePoints > playerPoints) {
       console.log("House wins!");
       setWinner("House!");
+    } else if (housePoints === playerPoints) {
+      console.log("It's a tie!");
+      setWinner("It's a tie!");
     } else {
       console.log("Player wins!");
       setWinner("Player!");
