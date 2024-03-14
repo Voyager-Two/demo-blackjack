@@ -1,5 +1,7 @@
 ## Blackjack demo
 
+- Main code inside [src/features/Blackjack.tsx](src/features/Blackjack.tsx)
+
 ---
 
 ### Tech stack
