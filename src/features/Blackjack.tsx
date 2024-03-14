@@ -34,7 +34,6 @@ const Blackjack = () => {
             return;
           }
           const data = response.data;
-          // TODO: use logger
           console.log("result", data);
           setDeckID(data.deck_id);
           draw("house", data.deck_id);
@@ -61,7 +60,6 @@ const Blackjack = () => {
           return;
         }
         const data = response.data;
-        // TODO: use logger
         console.log("result", data);
         if (forWhom === "house") {
           setHouseCards(data.cards);
@@ -92,8 +90,25 @@ const Blackjack = () => {
   };
 
   const hit = async () => {
-    // setLoading(true);
-    // Dealer draws 2 cards
+    // Player draws a card
+    if (remainingCards === 0) {
+      // Reshuffle the deck before drawing
+      const API_URL = `https://deckofcardsapi.com/api/deck/${deckID}/shuffle/`;
+      await axios
+        .get(API_URL)
+        .then((response) => {
+          if (!response?.data?.deck_id) {
+            console.error("result", response);
+            return;
+          }
+          const data = response.data;
+          setRemainingCards(52);
+          console.log("result", data);
+        })
+        .finally(() => {
+          // setLoading(false);
+        });
+    }
     await axios
       .get(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=1`)
       .then((response) => {

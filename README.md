@@ -1,5 +1,6 @@
 ## Blackjack demo
 
+- Site: https://demo-blackjack.vercel.app/
 - Main code inside [src/features/Blackjack.tsx](src/features/Blackjack.tsx)
 
 ---
