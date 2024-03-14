@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --background-color: rgba(104, 104, 104, 0.41);
+
+    --primary-color: #fff7eb;
+    --highlight-color: #ffaf40;
+    /*--secondary-color: #ffa989;*/
+    --secondary-color: #fff2e9;
+    --tertiary-color: #ba5a5a;
+    --long-text-color: #ffdadb;
+    --muted-secondary-color: #eac6b8;
+    --white-color: #faede8;
+
+    --primary-card-color: #b86a4c;
+    --primary-border-color: #a95b43b8;
+    /*--primary-card-color: #2c1819;*/
+    /*#e3cfc7;*/
+}
+
+html, body {
+    /*background-color: #3e3030;*/
+    /*background-color: var(--background-color);*/
+    /*#261819*/
+    /*#2c1e1f*/
+}
+
+html {
+    /* Fallback for browsers that don't support scrollbar-gutter */
+    overflow-y: scroll;
+}
+
+/* scrollbar-gutter, prevent page twitch when scrollbar appears/disappears */
+@supports (scrollbar-gutter: stable) {
+    html {
+        overflow-y: auto;
+        scrollbar-gutter: stable;
+    }
+}
+
+.nextui-navbar-cursor-highlight {
+    top: 0;
+    height: 100%;
+    background-color: var(--background-color);
+}
+.nextui-navbar-content {
+    padding: 0;
+    height: 70%;
+}
+.nextui-navbar-container {
+    /*background: var(--primary-card-color);*/
+    background: transparent;
+    /*background: #2c1819c4;*/
+}
+.nextui-input-wrapper {
+    background: rgba(233, 233, 233, 0.85);
+    color: #000;
+}
+input[type="text"],input[type="number"] {
+    color: #000;
+}
+/*.nextui-navbar-link:first-child {*/
+/*  color: var(--primary-color);*/
+/*}*/
+
